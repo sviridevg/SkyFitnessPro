@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@layer components {
+  body:has(.entry) {
+    @apply h-full overflow-hidden;
+  }
+  #root:has(.entry) {
+    @apply overflow-y-scroll;
+  }
+  input {
+    @apply h-[52px] rounded-[8px] border-[1px] border-solid border-[#D0CECE] p-4 focus:outline-none;
+  }
+  .buttonPrimary {
+    @apply h-[52px] rounded-[46px] bg-btnPrimaryRegular;
+  }
+  .buttonPrimary:hover {
+    @apply h-[52px] rounded-[46px] bg-btnPrimaryHover;
+  }
+  .buttonPrimary:active {
+    @apply h-[52px] rounded-[46px] bg-btnPrimaryActive text-white;
+  }
+  .buttonPrimaryMobile {
+    @apply h-[36px] rounded-[46px] bg-btnPrimaryRegular;
+  }
+  .buttonPrimaryMobile:hover {
+    @apply  bg-btnPrimaryHover;
+  }
+  .buttonPrimaryMobile:active {
+    @apply  bg-btnPrimaryActive text-white;
+  }
+  .buttonPrimary:invalid {
+    @apply h-[52px] rounded-[46px] bg-btnPrimaryInactive text-[#999];
+  }
+  .buttonSecondary {
+    @apply h-[52px] rounded-[46px] bg-btnSecondaryRegular;
+  }
+  .buttonSecondary:hover {
+    @apply h-[52px] rounded-[46px] bg-btnSecondaryHover;
+  }
+  .buttonSecondary:active {
+    @apply h-[52px] rounded-[46px] bg-btnSecondaryActive;
+  }
+  .buttonSecondary:invalid {
+    @apply h-[52px] rounded-[46px] bg-btnSecondaryInactive text-[#999];
+  }
+  .err {
+    @apply text-center leading-[34px] text-red-600;
+  }
+  .corPageBlockGradient {
+    @apply bg-gradient-to-r from-[#151720] to-[#1E212E];
+  }
+  .corPageTextBlack06 {
+    @apply text-[rgba(0,0,0,0.6)];
+  }
+  .shadowBlack013 {
+    @apply shadow-[0_4px_67px_-12px_rgba(0,0,0,0.13)];
+  }
+}
+
+@layer utilities {
+  .underLineText {
+    text-decoration-skip-ink: none;
+    text-decoration: underline;
+  }
+}
